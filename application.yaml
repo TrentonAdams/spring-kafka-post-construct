@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        request.timeout.ms: 5000
+        max.block.ms: 5000
+    admin:
+      properties:
+        request.timeout.ms: 5000
+    consumer:
+      properties:
+        request.timeout.ms: 5000
